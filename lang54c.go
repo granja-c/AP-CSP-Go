@@ -4,7 +4,7 @@ import "math"
 
 func main() {
   var dia, r, circ, area float64
-  var pi float64 = 3.14159
+  var pi = 3.14159
 
   fmt.Print("Enter the diameter: ")
   fmt.Scanf("%f", &dia)
