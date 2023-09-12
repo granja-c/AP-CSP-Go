@@ -64,7 +64,7 @@ ___
 
 
 # 1. Compiling and Running
-
+* "go run filename.go" to run
 
 
 
@@ -77,9 +77,14 @@ ___
 
 
 # 2. Data Types
+|type|desc|ex|
+|--|--|--|
+|int|Whole numbers pos or neg, integers|5, -4, 3|
+|float|Numbers with decimals|5.4, 3.2, 8.7455|
+|string|Sequence of characters|"Hello", "HI!!"|
+|bool|True or false|true, false|
 
-???
-
+include type of ints + floats
 ```LANGUAGE_HERE
 
 ```
@@ -95,11 +100,11 @@ ___
 
 
 # 3. Console I/O
+### Input
+* "fmt.Scanf("%type", &var)"
 
-???
-
-
-
+### Output
+* "fmt.Printf("Words")"
 
 
 ___
@@ -109,8 +114,15 @@ ___
 
 
 # 4. Arithmetic Operations
-
-???
+|Operator|Desc|Ex.|
+|--|--|--|
+|+|Adds|5 + 2 = 7|
+|-|Subtracts|5 - 2 = 3|
+|*|Multiplies||
+|/|Divides||
+|%|Modulus, gives the remainder||
+|++|Increment operator, adds 1||
+|--|Increment operator, subtracts 1||
 
 
 
@@ -235,13 +247,37 @@ ___
 
 
 # 13. Looping Structures
+* Go only has for loops
 
-???
+**for loop**
+```go
+for i := 0; i < 10; i++ {
+		sum += i
+}
+```
+* i := 0 initializes the loop control var
+* i < 10 checks that i is less than 10, if it is the loop runs
+* i++ adds one to i after the loop is done running
 
+**while loop**
+```go
+i := 0
+for i < 5 {
+  fmt.Print(i)
+  i++
+}
+```
+* skip the init, just put the condition expression
+* loop will run until condition expression is false
 
+**for each loop**
+```go
+nums = []int{1, 2, 3, 4}
+for i, n := range nums {
+  fmt.Print(n)
+}
 
-
-
+```
 ___
 
 
