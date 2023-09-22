@@ -3,8 +3,8 @@ import "fmt"
 
 
 func main() {
-	nums := []int{1, 2, 3, 4}
-  for n := range nums {
-    fmt.Print(n)
+	nums := []int{5, 6, 7, 8}
+  for i, n := range nums {
+    fmt.Print(i, n)
   }
 }

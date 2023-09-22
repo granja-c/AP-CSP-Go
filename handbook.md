@@ -84,7 +84,8 @@ ___
 |string|Sequence of characters|"Hello", "HI!!"|
 |bool|True or false|true, false|
 
-include type of ints + floats
+<!-- include int and float types -->
+
 ```LANGUAGE_HERE
 
 ```
@@ -101,11 +102,15 @@ ___
 
 # 3. Console I/O
 ### Input
-* "fmt.Scanf("%type", &var)"
+```go
+fmt.Scanf("%type", &var_name)
+```
+* When getting strings as input, the data type doesn't need to be declared
 
 ### Output
-* "fmt.Printf("Words")"
-
+```go
+fmt.Printf("Words")
+```
 
 ___
 
@@ -118,11 +123,11 @@ ___
 |--|--|--|
 |+|Adds|5 + 2 = 7|
 |-|Subtracts|5 - 2 = 3|
-|*|Multiplies||
-|/|Divides||
-|%|Modulus, gives the remainder||
-|++|Increment operator, adds 1||
-|--|Increment operator, subtracts 1||
+|*|Multiplies|5 * 2 = 10|
+|/|Divides|5 / 2 = 2 (rounds down /w ints)|
+|%|Modulus, gives the remainder|5 % 2 = 1|
+|++|Increment operator, adds 1|x++|
+|--|Increment operator, subtracts 1|x--|
 
 
 
@@ -149,10 +154,10 @@ ___
 
 
 # 6. Comments
-
-???
-
-
+* Comments are done with two slashes ("//")
+  ```go
+  // this is a comment
+  ```
 
 
 
@@ -249,17 +254,17 @@ ___
 # 13. Looping Structures
 * Go only has for loops
 
-**for loop**
+**for Loop**
 ```go
 for i := 0; i < 10; i++ {
-		sum += i
+	sum += i
 }
 ```
 * i := 0 initializes the loop control var
 * i < 10 checks that i is less than 10, if it is the loop runs
 * i++ adds one to i after the loop is done running
 
-**while loop**
+**while Loop**
 ```go
 i := 0
 for i < 5 {
@@ -270,14 +275,16 @@ for i < 5 {
 * skip the init, just put the condition expression
 * loop will run until condition expression is false
 
-**for each loop**
+**for-Each Loop**
 ```go
-nums = []int{1, 2, 3, 4}
+nums = []int{5, 6, 7, 8}
 for i, n := range nums {
-  fmt.Print(n)
+  fmt.Print(i, n)
 }
-
 ```
+* i is the item in the list
+* n in the index
+
 ___
 
 
